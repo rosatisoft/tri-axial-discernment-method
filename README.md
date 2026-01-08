@@ -23,9 +23,9 @@ The method is designed to be usable by both **human agents** and **AI systems**,
 
 The full paper is available on Zenodo:
 
-👉 https://doi.org/10.5281/zenodo.XXXXXXXX
+👉 https://doi.org/10.5281/zenodo.18182173
 
-> Replace `XXXXXXXX` with your actual Zenodo DOI number.
+> Replace `18182173` with your actual Zenodo DOI number.
 
 ## License
 
