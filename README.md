@@ -12,6 +12,249 @@ The method is designed to be usable by both **human agents** and **AI systems**,
 > Author: Ernesto Rosati Beristáin  
 > Published as a preprint on Zenodo.
 
+> A small engine for **structured judgment** in noisy environments.  
+> Foundation (F) · Context (C) · Principle (P)
+
+Este repositorio implementa el **Método Triaxial de Discernimiento** como un motor simple en Python:
+
+- Tú (humano) evalúas una afirmación o decisión en tres ejes:
+  - **F** – Fundamento (¿qué tan real y verificable es?)
+  - **C** – Contexto (¿en qué entorno y bajo qué fuerzas opera?)
+  - **P** – Principio (¿qué consecuencias produce aceptar/actuar en esa dirección?)
+- El motor integra esos valores y devuelve:
+  - un puntaje de **discernimiento D ∈ [0,1]**
+  - una **acción sugerida** (adoptar, complementar, cuestionar o descartar)
+
+La idea central:  
+> La IA y el humano no necesitan solo más datos, sino **mejor criterio**.
+
+---
+
+## 1. ¿Para qué sirve?
+
+Para cualquier caso donde haya **información confusa** o **decisiones con ruido**:
+
+- titulares virales, rumores, campañas mediáticas  
+- decisiones legales o de política interna  
+- elección de datasets, modelos o configuraciones en IA  
+- análisis de testimonios, informes o narrativas  
+- decisiones personales u organizacionales con impacto
+
+El método NO te dice *qué* pensar, sino **cómo ordenar tu juicio**:
+
+1. Separar **realidad** de apariencia (F).
+2. Ver el **marco** y las fuerzas alrededor (C).
+3. Medir **impacto y coherencia** de la acción (P).
+
+---
+
+## 2. Idea básica del modelo
+
+El discernimiento se calcula así:
+
+```text
+Discernimiento D = (F + C + P) / 3
+````
+
+donde:
+
+* **F, C, P** son valores entre **0 y 1**, obtenidos a partir de pequeñas preguntas:
+
+  * F (Fundamento): fuente, evidencia, coherencia con el mundo real…
+  * C (Contexto): presión emocional, agendas, marco temporal, actores…
+  * P (Principio): entropía o claridad que genera, daño o construcción, coherencia ética…
+
+La implementación es **axioma-agnóstica**:
+no obliga a aceptar un sistema metafísico; simplemente asume que:
+
+> Más coherencia y menos entropía narrativa
+> normalmente llevan a mejores decisiones.
+
+---
+
+## 3. Cómo usar el motor (versión corta)
+
+### Paso 1 — Formular la afirmación
+
+Ejemplo:
+
+> "Usar todo el dataset siempre maximiza la precisión sin costo extra."
+
+Ese es el **X** que vas a evaluar.
+
+---
+
+### Paso 2 — Puntuar criterios F, C y P
+
+Para cada eje respondes 4–5 preguntas (tabla del paper)
+con valores entre **0 y 1**:
+
+* 1.0 → muy sólido / claro / coherente
+* 0.5 → dudoso / parcial
+* 0.0 → falso / inconsistente
+
+En código, se ve así:
+
+```python
+F_criteria = [0.6, 0.4, 0.5, 0.3, 0.4]
+C_criteria = [0.7, 0.5, 0.8, 0.4, 0.6]
+P_criteria = [0.3, 0.5, 0.6, 0.9, 0.4]
+```
+
+---
+
+### Paso 3 — Llamar al motor F–C–P
+
+```python
+from tri_axial_discernment import compute_discernment_from_criteria
+
+result = compute_discernment_from_criteria(
+    foundation_criteria=F_criteria,
+    context_criteria=C_criteria,
+    principle_criteria=P_criteria,
+    notes={"scenario": "IA training dataset optimization"},
+)
+
+print(result.foundation)  # F
+print(result.context)     # C
+print(result.principle)   # P
+print(result.score)       # D
+print(result.action)      # acción sugerida (texto)
+```
+
+El motor hace tres cosas:
+
+1. **Promedia** los criterios F, C, P.
+2. Calcula **D = (F + C + P) / 3**.
+3. Devuelve una **acción recomendada**, según la escala:
+
+```text
+0.80–1.00 → Adoptar y, si es útil, compartir
+0.50–0.79 → Considerar válido, pero complementar análisis
+0.20–0.49 → Cuestionar, corregir, contrastar fuentes
+0.00–0.19 → Descartar o denunciar si es dañino/falso
+```
+
+---
+
+## 4. Ejecutar el ejemplo incluido
+
+El repositorio incluye un ejemplo aplicado a IA:
+
+```bash
+python examples/ia_dataset_example.py
+```
+
+Ese script:
+
+* define una afirmación concreta,
+* establece criterios F, C, P,
+* llama al motor,
+* imprime el resultado de forma entendible.
+
+Es el modelo mínimo de cómo usar el método en cualquier dominio.
+
+---
+
+## 5. Estructura del repositorio
+
+```text
+.
+├── README.md                        # Este archivo
+├── src/
+│   └── tri_axial_discernment.py     # Motor F–C–P (implementación principal)
+├── examples/
+│   └── ia_dataset_example.py        # Ejemplo práctico (IA / datasets)
+└── docs/
+    ├── ...                          # Textos completos ES/EN (paper)
+    └── ...                          # Resumen/abstract, tablas, etc.
+```
+
+---
+
+## 6. Qué hace el motor (y qué no)
+
+✅ **Hace:**
+
+* Ordena tu juicio en tres planos: realidad, contexto, consecuencia.
+* Te obliga a **explicitar** tu criterio en números (0–1).
+* Te permite **comparar casos** y ver por qué algo genera duda.
+* Es integrable en:
+
+  * asistentes IA,
+  * flujos legales,
+  * análisis mediático,
+  * herramientas de apoyo a la decisión.
+
+❌ **No hace:**
+
+* No “adivina” la verdad absoluta.
+* No reemplaza la evidencia, la investigación ni la responsabilidad.
+* No elimina todos los sesgos del evaluador.
+* No decide por ti: te muestra **dónde** estás decidiendo mal o por impulso.
+
+---
+
+## 7. Nota conceptual
+
+El método nació dentro de un marco filosófico más amplio
+(*El Axioma del Absoluto y la Restauración del Fundamento*).
+
+Sin embargo, en esta implementación:
+
+* el motor se mantiene **neutral** y **general**,
+* puede operar con cualquier marco ético que busque:
+
+  * coherencia,
+  * claridad,
+  * reducción de entropía (caos, confusión, manipulación).
+
+Puedes usarlo como:
+
+> Un “motor de criterio” acoplable a diferentes contextos
+> humanos y algorítmicos.
+
+---
+
+## 8. Próximos pasos (sugeridos)
+
+* Añadir más ejemplos:
+
+  * análisis legal (testimonios contradictorios),
+  * verificación de titulares virales,
+  * decisiones de política interna.
+* Crear notebooks (`/notebooks`) con casos explicados paso a paso.
+* Exponerlo como API ligera o módulo dentro de agentes IA.
+
+---
+
+### Short English summary
+
+This repository provides a small, axioma-agnostic Python engine for the
+**Tri-Axial Method of Discernment (F–C–P)**:
+
+* **F**oundation — factual grounding
+* **C**ontext — situational framing
+* **P**rinciple — systemic and ethical impact of action
+
+You score each axis with values in [0, 1], the engine computes:
+
+```text
+D = (F + C + P) / 3
+```
+
+and suggests an action (adopt, complement, question, discard).
+
+It is designed to be:
+
+* simple enough for humans,
+* formal enough for code,
+* and transparent enough for use in IA alignment and critical evaluation.
+
+See `src/tri_axial_discernment.py` for the core implementation
+and `examples/ia_dataset_example.py` for a concrete IA use case.
+
+```
 ## Contents (roadmap)
 
 - `/docs/` – Formal documents (PDF, manifests, diagrams)
@@ -23,9 +266,7 @@ The method is designed to be usable by both **human agents** and **AI systems**,
 
 The full paper is available on Zenodo:
 
-👉 https://doi.org/10.5281/zenodo.18182173
-
-> Replace `18182173` with your actual Zenodo DOI number.
+👉DOI 10.5281/zenodo.18182173
 
 ## License
 
