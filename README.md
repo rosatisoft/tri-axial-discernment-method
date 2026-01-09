@@ -266,7 +266,7 @@ and `examples/ia_dataset_example.py` for a concrete IA use case.
 
 The full paper is available on Zenodo:
 
-👉DOI 10.5281/zenodo.18182173
+https://doi.org/10.5281/zenodo.18182173
 
 ## License
 
