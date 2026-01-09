@@ -228,6 +228,18 @@ Puedes usarlo como:
 
 ---
 
+## 9. Plantillas listas para usar
+
+En `templates/` encontrarás formatos listos para imprimir o copiar:
+
+- `evaluation-matrix.md` — matriz general F–C–P para cualquier caso.
+- `legal-analysis.md` — versión adaptada a expedientes, testimonios y evidencia.
+- `media-analysis.md` — análisis de noticias virales, redes y narrativas mediáticas.
+
+Estas plantillas permiten aplicar el método aunque no se programe nada.
+
+---
+
 ### Short English summary
 
 This repository provides a small, axioma-agnostic Python engine for the
