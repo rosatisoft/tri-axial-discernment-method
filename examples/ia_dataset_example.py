@@ -1,4 +1,9 @@
 """
+© 2026 Ernesto Rosati  
+Este documento está licenciado bajo Apache 2.0  
+Publicación oficial y DOI disponible en Zenodo
+https://doi.org/10.5281/zenodo.18182173
+
 ia_dataset_example.py
 
 Example: applying the Tri-Axial Method of Discernment (F–C–P)
