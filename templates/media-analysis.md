@@ -57,3 +57,7 @@ Acción sugerida:
 ---
 
 ## ✏️ Observaciones finales
+
+Plantilla generada como parte del Tri-Axial Discernment Method  
+Licenciado bajo Apache 2.0 — Libre para duplicar, adaptar y distribuir.  
+Se agradece atribución. https://doi.org/10.5281/zenodo.18182173
