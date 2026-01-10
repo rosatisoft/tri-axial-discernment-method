@@ -10,6 +10,8 @@
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
 [![Zenodo DOI](https://img.shields.io/badge/Zenodo-18182173-blue)](https://doi.org/10.5281/zenodo.18182173)
 
+The Tri-Axial Method can be understood at three layers:
+(1) theory (paper), (2) method (questions), (3) engine (this repo).
 ---
 ## Who is this for?
 
