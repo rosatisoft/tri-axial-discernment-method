@@ -42,3 +42,8 @@ Discernimiento D = (F + C + P) / 3 = (0.34 + 0.40 + 0.62) / 3 ≈ **0.45**
 
 ## CONCLUSIÓN
 “Cuestionar y corregir con evidencia. Priorizar justicia responsable.”
+
+© 2026 Ernesto Rosati  
+Este documento está licenciado bajo Apache 2.0  
+Publicación oficial y DOI disponible en Zenodo
+https://doi.org/10.5281/zenodo.18182173
