@@ -167,3 +167,7 @@ Ejemplos:
 📌 “Vacunas nuevas son peligrosas hasta que pasen años.”
 📌 “México no progresará mientras exista corrupción.”
 
+© 2026 Ernesto Rosati  
+Este documento está licenciado bajo Apache 2.0  
+Publicación oficial y DOI disponible en Zenodo
+https://doi.org/10.5281/zenodo.18182173
