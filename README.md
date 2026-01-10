@@ -2,6 +2,33 @@
 
 # Tri-Axial Method of Discernment (F–C–P)
 
+## **Badges y Enlace a Releases**
+
+```md
+[![Status](https://img.shields.io/badge/status-prealpha-orange)]()
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
+[![Zenodo DOI](https://img.shields.io/badge/Zenodo-18182173-blue)](https://doi.org/10.5281/zenodo.18182173)
+
+---
+## Who is this for?
+
+The Tri-Axial Method of Discernment is designed for anyone who needs to make
+clearer, more grounded, and less biased decisions.
+
+It is especially useful for:
+
+- **Researchers and analysts** evaluating claims and evidence  
+- **Journalists and fact-checkers** validating information under uncertainty  
+- **Educators and students** learning structured reasoning  
+- **Data scientists and ML practitioners** assessing model decisions  
+- **Policy makers and institutions** reducing bias and arbitrariness  
+- **AI developers** who want transparent reasoning chains for LLMs  
+- **General public** wishing to think better in an era of misinformation  
+
+If you must **decide**, **interpret**, or **evaluate** —  
+F–C–P gives you structure, without telling you what to think.
+
 This repository contains the conceptual and operational resources for the **Tri-Axial Method of Discernment**, a framework for evaluating information, claims, and decisions using three simultaneous axes:
 
 1. **Foundation (F)** — factual grounding / evidence
@@ -156,6 +183,34 @@ Ese script:
 
 Es el modelo mínimo de cómo usar el método en cualquier dominio.
 
+"Install & Run" para recién llegados
+
+
+## Installation (early preview v0.1)
+
+Clone and run locally:
+
+```bash
+git clone https://github.com/rosatisoft/tri-axial-discernment-method.git
+cd tri-axial-discernment-method
+pip install -r requirements.txt   # upcoming v0.2
+
+
+Run interactive CLI:
+
+python src/interactive_cli.py
+
+
+Run a sample:
+
+python examples/ia_dataset_example.py
+
+
+Open the notebooks:
+
+jupyter lab
+
+
 ---
 
 ## 5. Estructura del repositorio
@@ -225,8 +280,11 @@ Puedes usarlo como:
   * análisis legal (testimonios contradictorios),
   * verificación de titulares virales,
   * decisiones de política interna.
+    ya estan en examples
 * Crear notebooks (`/notebooks`) con casos explicados paso a paso.
+  ya estan en notebooks
 * Exponerlo como API ligera o módulo dentro de agentes IA.
+  ya estan en src
 
 ---
 
@@ -284,8 +342,26 @@ https://doi.org/10.5281/zenodo.18182173
 
 ## License
 
-The methodological content is shared under:
+The repository contains two kinds of intellectual property:
 
-**Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International (CC BY-NC-SA 4.0)**
+### 📄 Intellectual Content (Paper, theory, essays)
+All formal documents included in `/docs` or linked via DOI  
+are licensed under:
 
-Please refer to the Zenodo record for the official license statement.
+**Creative Commons Attribution–NonCommercial–ShareAlike 4.0 (CC BY-NC-SA 4.0)**  
+as published on Zenodo: https://doi.org/10.5281/zenodo.18182173
+
+This license restricts **commercial reuse** without permission.
+
+---
+
+### 🧠 Software and Code
+All Python source files in `/src`, `/examples` and related modules  
+are distributed under:
+
+**Apache License 2.0**  
+(You may use, modify, distribute, and commercially deploy the code.)
+
+See the `LICENSE` file for complete terms.
+
+
