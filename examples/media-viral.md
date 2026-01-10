@@ -42,3 +42,8 @@ D = (0.22 + 0.42 + 0.34) / 3 ≈ **0.33**
 
 ## FRASE FINAL
 “La ansiedad no es evidencia; debemos seguir datos, no miedo.”
+
+© 2026 Ernesto Rosati  
+Este documento está licenciado bajo Apache 2.0  
+Publicación oficial y DOI disponible en Zenodo
+https://doi.org/10.5281/zenodo.18182173
