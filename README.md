@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
 # Tri-Axial Method of Discernment (F–C–P)
 
 This repository contains the conceptual and operational resources for the **Tri-Axial Method of Discernment**, a framework for evaluating information, claims, and decisions using three simultaneous axes:
