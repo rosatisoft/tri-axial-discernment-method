@@ -2,17 +2,6 @@
 
 # Tri-Axial Method of Discernment (F–C–P)
 
-## **Badges y Enlace a Releases**
-
-```md
-[![Status](https://img.shields.io/badge/status-prealpha-orange)]()
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
-[![Zenodo DOI](https://img.shields.io/badge/Zenodo-18182173-blue)](https://doi.org/10.5281/zenodo.18182173)
-
-The Tri-Axial Method can be understood at three layers:
-(1) theory (paper), (2) method (questions), (3) engine (this repo).
----
 ## Who is this for?
 
 The Tri-Axial Method of Discernment is designed for anyone who needs to make
@@ -31,6 +20,17 @@ It is especially useful for:
 If you must **decide**, **interpret**, or **evaluate** —  
 F–C–P gives you structure, without telling you what to think.
 
+## **Badges y Enlace a Releases**
+
+```md
+[![Status](https://img.shields.io/badge/status-prealpha-orange)]()
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
+[![Zenodo DOI](https://img.shields.io/badge/Zenodo-18182173-blue)](https://doi.org/10.5281/zenodo.18182173)
+
+The Tri-Axial Method can be understood at three layers:
+(1) theory (paper), (2) method (questions), (3) engine (this repo).
+---
 This repository contains the conceptual and operational resources for the **Tri-Axial Method of Discernment**, a framework for evaluating information, claims, and decisions using three simultaneous axes:
 
 1. **Foundation (F)** — factual grounding / evidence
@@ -38,6 +38,13 @@ This repository contains the conceptual and operational resources for the **Tri-
 3. **Principle (P)** — systemic and ethical implications of action
 
 The method is designed to be usable by both **human agents** and **AI systems**, and is described in detail in the working paper:
+
+tabla super-sintética del sistema
+
+Eje	Pregunta guía	Ejemplos
+F – Fundamento	¿Es real?	          Evidencia, fuentes, verificabilidad
+C – Contexto	¿En qué condiciones?	Actores, presión, incentivos
+P – Principio	¿Qué genera?	        Acción, ética, entropía, consecuencia
 
 > **“Método Triaxial de Discernimiento”**  
 > Author: Ernesto Rosati Beristáin  
@@ -100,6 +107,10 @@ no obliga a aceptar un sistema metafísico; simplemente asume que:
 
 > Más coherencia y menos entropía narrativa
 > normalmente llevan a mejores decisiones.
+
+📓 Try it now:
+Visit `/notebooks` for interactive examples  
+🧩 And `/templates` if you want to apply the method without coding
 
 ---
 
