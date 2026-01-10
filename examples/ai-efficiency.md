@@ -43,3 +43,8 @@ Document energy savings
 
 ## Summary
 “More data is not always more truth. Coherence beats brute force.”
+
+© 2026 Ernesto Rosati  
+Este documento está licenciado bajo Apache 2.0  
+Publicación oficial y DOI disponible en Zenodo
+https://doi.org/10.5281/zenodo.18182173
