@@ -1,0 +1,15 @@
+[
+  {
+    "axis": "F",
+    "dimension": "Existencia",
+    "question": "¿Los recursos necesarios existen hoy de forma tangible y verificable?",
+    "entropy_alert": "Vacío: Se basa en deuda futura, promesas o activos inexistentes."
+  },
+  {
+    "axis": "F",
+    "dimension": "Capacidad",
+    "question": "¿Tenemos la competencia probada para transformar el recurso sin destruirlo?",
+    "entropy_alert": "Fricción: La incompetencia técnica generará más costo que beneficio."
+  }
+  // ... resto de filas
+]
