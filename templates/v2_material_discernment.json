@@ -10,6 +10,30 @@
     "dimension": "Capacidad",
     "question": "¿Tenemos la competencia probada para transformar el recurso sin destruirlo?",
     "entropy_alert": "Fricción: La incompetencia técnica generará más costo que beneficio."
+  },
+  {
+    "axis": "C",
+    "dimension": "Sostenibilidad",
+    "question": "¿El sistema puede mantener este proceso indefinidamente sin colapsar?",
+    "entropy_alert": "Parasitismo: Requiere inyectar energía externa constantemente para no morir."
+  },
+  {
+    "axis": "C",
+    "dimension": "Orden",
+    "question": "¿La estructura propuesta reduce la complejidad y el ruido?",
+    "entropy_alert": "Ruido: Burocracia excesiva, órdenes cruzadas o confusión de roles."
+  },
+  {
+    "axis": "P",
+    "dimension": "Vitalidad",
+    "question": "¿El resultado final aporta más energía/valor al sistema de la que costó producirlo?",
+    "entropy_alert": "Desperdicio: El costo energético es mayor que el valor creado (suma negativa)."
+  },
+  {
+    "axis": "P",
+    "dimension": "Integridad",
+    "question": "¿La ejecución preserva la salud física y mental de los agentes involucrados?",
+    "entropy_alert": "Degradación: Genera burnout, enfermedad o daño físico acumulativo."
   }
-  // ... resto de filas
 ]
+
