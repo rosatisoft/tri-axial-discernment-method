@@ -1,6 +1,9 @@
 # agents/corporate_filter.py
 from typing import Dict, List
+
 from tri_axial_v2 import Criterion, compute_discernment_v2
+from agents.interactive_agent import LLMInterface  # importa la misma interfaz
+
 
 class CorporateDiscernmentAgent:
     def __init__(self, llm: LLMInterface, templates_per_profile: Dict[str, List[Dict]]):
