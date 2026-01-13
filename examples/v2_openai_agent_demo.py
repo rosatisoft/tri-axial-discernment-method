@@ -1,10 +1,20 @@
+import os
+import sys
+
+# Añadir la carpeta src al path de Python
+CURRENT_DIR = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
+SRC_DIR = os.path.join(PROJECT_ROOT, "src")
+if SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
+
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Tuple
 import json
 
 from openai import OpenAI
-from tri_axial_v2 import Criterion, compute_discernment_v2
+from tri_axial_v2 import compute_discernment_v2
 
 TEMPLATE_FILE = Path("templates") / "v2_material_discernment.json"
 
